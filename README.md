@@ -11,10 +11,68 @@ The application supports:
 
 ---
 
-## Project Structure
+## Terminal Task Manager (Java CLI) – Setup and Usage Guide
 
--- To be Added --
+This guide explains how to set up and run the Terminal Task Manager project from scratch, assuming no prior experience with Java or command-line tools.
 
+---
+
+## 1. Install Java
+
+- You need to have **Java Development Kit (JDK) 21 or higher** installed.  
+- This allows your system to compile and run Java programs.  
+- If Java is not installed, download and install it from the OpenJDK website or Oracle’s JDK page.  
+- After installation, verify it works by checking the version in a terminal.
+
+---
+
+## 2. Prepare the Project Folder and Clone the Repo
+
+- Create a folder (for example - task-manager/) where you want the project to reside. 
+- run -  `git clone https://github.com/sparsh240/Java-BYOP-24BAI10268.git task-manager/` to clone the repository. (using git bash in windows or terminal in macOS or linux)
+
+
+
+
+---
+
+## 4. Compile the Project
+
+- Use your terminal to navigate into the main project folder.  
+- Compile all Java files so the program can run. This step creates the necessary compiled files.  
+
+- `javac Main.java model/*.java service/*.java util/*.java`
+
+---
+
+## 5. Run the Project
+- run - `java Main` 
+- After compilation, start the program.  
+- You will see a menu allowing you to register a new user, login, and exit.  
+- Once logged in, you can:
+  - Add tasks  
+  - View your tasks  
+  - Mark tasks as done (completed tasks are removed from the list)  
+  - Share tasks with other users  
+  - Logout to return to the main menu  
+
+- Data is automatically saved between sessions in the `data` folder.
+
+---
+
+## 6. Data Storage
+
+- `users.dat` stores usernames and hashed passwords securely.  
+- `tasks.dat` stores all tasks, their owners, and shared users.  
+- The program handles reading and writing these files automatically.  
+- Do not delete the `data` folder if you want to preserve your tasks and users.
+
+---
+
+## 7. Optional Suggestion
+
+- You can add the project folder to your system’s PATH environment variable.  
+- This allows you to run the program from any directory without having to navigate to the project folder each time.
 
 ---
 
@@ -51,7 +109,7 @@ The application supports:
 
 ---
 
-## service/ (Business Logic Layer)
+## service/ (Logic Layer)
 
 ### AuthService.java
 - Handles user authentication  
@@ -150,15 +208,6 @@ The application supports:
 
 ---
 
-## Future Improvements
-
-- Switch from `.dat` to JSON or database  
-- Add deadlines & priorities  
-- Implement notifications  
-- Build GUI (JavaFX)  
-- Convert to REST API backend  
-
----
 
 ## Summary
 
